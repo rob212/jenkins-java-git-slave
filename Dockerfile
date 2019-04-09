@@ -35,6 +35,6 @@ EXPOSE 22
 ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64
 
 # Default command
-CMD ["/bin/bash", "-D"]
+CMD ["/usr/sbin/sshd", "-D"]
 
 
