@@ -45,7 +45,8 @@ RUN apt-get install -y git
 
 # Set user jenkins to the image
 RUN useradd -m -d /home/jenkins -s /bin/sh jenkins && \
-    echo "jenkins:jenkins" | chpasswd
+    echo "jenkins:jenkins" | chpasswd && \
+    usermod -aG docker jenkins
 
 # Standard SSH port 
 EXPOSE 22
